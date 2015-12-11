@@ -1,0 +1,304 @@
+
+Dynamic modeling
+
+SUBH Connects scales
+
+BC
+
+SCALEFIG 0.45 trans.jpg
+
+NC
+
+SCALEFIG 0.6 data/ewmeas.Rout.pdf
+
+EC
+
+----------------------------------------------------------------------
+
+Box models
+
+SUBH Divide people into categories:
+
+SCALEFIG 0.4 diagrams/sir.np.three.pdf
+
+	Susceptible $\to$ Infectious $\to$ Recovered
+
+----------------------------------------------------------------------
+
+What determines transition rates?
+
+SCALEFIG 0.4 diagrams/sir.three.pdf
+
+	People get better independently
+
+	People get infected by infectious people
+
+----------------------------------------------------------------------
+
+Conceptual modeling
+
+SCALEFIG 0.4 diagrams/sir.three.pdf
+
+SCALEFIG 0.6 thinker.jpg
+
+----------------------------------------------------------------------
+
+Conceptual modeling
+
+SCALEFIG 0.4 diagrams/sir.three.pdf
+
+	What is the final result?
+
+	When does disease increase, decrease?
+
+----------------------------------------------------------------------
+
+Implementation
+
+SCALEFIG 0.4 diagrams/sir.three.pdf
+
+	The conceptually \emph{simplest} way to implement this conceptual
+	model concretely is Ordinary Differential Equations (ODEs)
+
+		Other options may be more realistic
+
+		Or simpler in practice
+
+	Requires assumption about recovery and transmission
+
+----------------------------------------------------------------------
+
+Recovery
+
+SCALEFIG 0.4 diagrams/sir.three.pdf
+
+	Infectious people recover at \emph{per capita}
+	rate $\gamma$ 
+
+		Total recovery rate is $\gamma I$
+
+		Mean time infectious is $D = 1/\gamma$
+
+----------------------------------------------------------------------
+
+Transmission
+
+SCALEFIG 0.4 diagrams/sir.three.pdf
+
+	Susceptible people get infected by:
+
+		Going around and contacting people (rate $c$)
+
+		Some of these people are infectious (proportion $I/N$)
+
+		Some of these contacts are effective (proportion $p$)
+
+	Per capita rate of becoming infected is $c p I/N$.  We write $\beta
+	I/N$ ($\beta = cp$)
+
+	Population-level transmission rate is $\beta SI/N$
+
+----------------------------------------------------------------------
+
+Another perspective on transmission
+
+SCALEFIG 0.4 diagrams/sir.three.pdf
+
+	Infectious people infect others by:
+
+		Going around and contacting people (rate $c$)
+
+		Some of these people are susceptible (proportion $S/N$)
+
+		Some of these contacts are effective (proportion $p$)
+
+	Per capita rate of infecting others is $c p S/N$.  We write $\beta
+	S/N$
+
+	Population-level transmission rate is $\beta SI/N$
+
+----------------------------------------------------------------------
+
+ODE implementation
+
+SCALEFIG 0.4 diagrams/sir.three.pdf
+
+UP 0.7in
+
+SCALEFIG 0.8 diagrams/sirodes.const.pdf
+
+----------------------------------------------------------------------
+
+Spreadsheet example
+
+----------------------------------------------------------------------
+
+ODE assumptions
+
+BC
+
+SCALEFIG 0.45 stirrer.jpg
+
+NC
+
+	Lots and lots of people
+
+	Perfectly mixed
+
+EC
+
+----------------------------------------------------------------------
+
+ODE assumptions
+
+LINEFIG 0.8 exp.Rout-0.pdf
+
+FINEFIG 0.8 exp.Rout-1.pdf
+
+	Waiting times are exponentially distributed
+
+	Rarely realistic
+
+----------------------------------------------------------------------
+
+Scripts vs.\ spreadsheets
+
+BC
+
+SCALEFIG 0.6 gd.png
+
+NC
+
+SCALEFIG 0.6 R.png
+
+EC
+
+----------------------------------------------------------------------
+
+More about transmission
+
+BC
+
+SCALEFIG 0.45 trans.jpg
+
+NC
+
+	$\beta = pc$
+
+	Sometimes this decomposition is clear
+
+	But usually it's not
+
+EC
+
+----------------------------------------------------------------------
+
+Population sizes
+
+SCALEFIG 0.4 diagrams/sir.three.pdf
+
+UP 0.7in
+
+SCALEFIG 0.8 diagrams/sirodes.const.pdf
+
+----------------------------------------------------------------------
+
+Population sizes
+
+SCALEFIG 0.4 diagrams/sir.three.pdf
+
+UP 0.7in
+
+SCALEFIG 0.8 diagrams/sirodes.pdf
+
+----------------------------------------------------------------------
+
+Standard incidence
+
+SCALEFIG 0.7 beta.Rout-0.pdf
+
+	$\beta(N) = \beta_0$
+
+	${\cal T} = \frac{\beta_0 SI}{N}$
+
+	Also known as frequency-dependent transmission
+
+----------------------------------------------------------------------
+
+Mass action
+
+SCALEFIG 0.7 beta.Rout-1.pdf
+
+	$\beta(N) = \beta_1 N$
+
+	${\cal T} = \beta_1 SI$
+
+	Also known as density-dependent transmission
+
+----------------------------------------------------------------------
+
+Other
+
+SCALEFIG 0.7 beta.Rout-3.pdf
+
+	May not go to zero when $N$ does
+
+	May not go to $\infty$ when $N$ does
+
+----------------------------------------------------------------------
+
+Digression -- units
+
+	${\cal T} = \beta SI/N: [\mathrm{ppl}/\mathrm{time}]$
+
+	$\beta: [1/\mathrm{time}]$
+
+		$\beta/\gamma = \beta D: [1]$
+
+		Standard incidence, $\beta_0: [1/\mathrm{time}]$
+
+		Mass-action incidence, $\beta_0: [1/\mathrm{time}]$
+
+----------------------------------------------------------------------
+
+Closing the circle
+
+SCALEFIG 0.5 diagrams/sirs.three.pdf
+
+----------------------------------------------------------------------
+
+Births and deaths
+
+SCALEFIG 0.6 diagrams/sirbd.three.pdf
+
+----------------------------------------------------------------------
+
+Tendency to oscillate
+
+PFIG comp0.pdf
+
+----------------------------------------------------------------------
+
+With individuality
+
+PFIG comp.pdf
+
+----------------------------------------------------------------------
+
+Summary
+
+	Dynamics are an esssential tool to link scales
+
+	Very simple models can provide useful insights
+
+	More complex models can provide more detail, but also require more
+	assumptions, and more choices
+
+----------------------------------------------------------------------
+
+Conclusions from simple models
+
+	Threshold behaviour
+
+	Tendency to oscillate
+

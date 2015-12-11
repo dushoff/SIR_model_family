@@ -2,29 +2,85 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: notarget
+target pngtarget pdftarget vtarget acrtarget: lecture.draft.pdf 
 
 ##################################################################
-
 
 # make files
 
 Sources = Makefile .gitignore README.md stuff.mk LICENSE.md
 include stuff.mk
+-include $(ms)/talk.def
+-include $(ms)/perl.def
 
 ##################################################################
 
-## Content
+## Slides
 
-######################################################################
+CSources += lecture.txt
 
-### Makestuff
+lecture.draft.pdf: lecture.txt
 
-## Change this name to download a new version of the makestuff directory
-# Makefile: start.makestuff
+## Directories
+
+subdirs += data talkdir
+data = ../Disease_data/
+
+Makefile: $(subdirs)
+$(subdirs):
+	ln -s $($@) $@
+
+##################################################################
+
+## Diagrams
+
+include diagrams/sources.mk
+
+diagrams/%: /proc/uptime
+	cd diagrams && $(MAKE) $*
+
+##################################################################
+
+## Simulations
+
+### Simple
+
+CSources += exp.R beta.R
+
+#### Not implemented here yet!
+
+CSources += onestoch.pdf onesto.pdf comp0.pdf comp.pdf onedet.pdf
+
+##################################################################
+
+## Pictures
+
+CSources += trans.jpg gd.png R.png
+
+thinker.jpg: 
+	wget -O $@ "http://si.smugmug.com/2008/Lighting-experiments/i-9g8KcQZ/1/L/cycladic%20thinker-L.jpg"
+
+stirrer.large.jpg:
+	wget -O $@ "http://upload.wikimedia.org/wikipedia/commons/3/32/Magnetic_Stirrer.JPG"
+
+stirrer.jpg: stirrer.large.jpg
+	convert -scale 25% $< $@
+
+##################################################################
+
+## Crib
+
+crib = ~/Dropbox/academicWW/SIR_model_family/
+
+$(CSources): ;$(ccrib)
+
+Sources += $(CSources)
+
+##################################################################
 
 -include $(ms)/git.mk
 -include $(ms)/visual.mk
 
-# -include $(ms)/wrapR.mk
-# -include $(ms)/oldlatex.mk
+-include $(ms)/wrapR.mk
+-include $(ms)/newlatex.mk
+-include $(ms)/talk.mk

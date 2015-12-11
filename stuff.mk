@@ -5,8 +5,13 @@
 	touch $@
 
 msrepo = https://github.com/dushoff
-gitroot = ../
+gitroot = ./
 
 -include local.mk
 -include $(gitroot)/local.mk
 export ms = $(gitroot)/makestuff
+
+Makefile: $(ms)
+
+$(ms):
+	cd $(dir $(ms)) && git clone $(msrepo)/$(notdir $(ms)).git
