@@ -17,7 +17,7 @@ include stuff.mk
 
 ## Slides
 
-CSources += lecture.txt
+Sources += lecture.txt
 
 lecture.draft.pdf: lecture.txt
 
@@ -45,17 +45,17 @@ diagrams/%: /proc/uptime
 
 ### Simple
 
-CSources += exp.R beta.R
+Sources += exp.R beta.R
 
 #### Not implemented here yet!
 
-CSources += onestoch.pdf onesto.pdf comp0.pdf comp.pdf onedet.pdf
+Sources += onestoch.pdf onesto.pdf comp0.pdf comp.pdf onedet.pdf
 
 ##################################################################
 
 ## Pictures
 
-CSources += trans.jpg gd.png R.png
+Sources += trans.jpg gd.png R.png
 
 thinker.jpg: 
 	wget -O $@ "http://si.smugmug.com/2008/Lighting-experiments/i-9g8KcQZ/1/L/cycladic%20thinker-L.jpg"
@@ -68,15 +68,7 @@ stirrer.jpg: stirrer.large.jpg
 
 ##################################################################
 
-## Crib
-
-crib = ~/Dropbox/academicWW/SIR_model_family/
-
-$(CSources): ;$(ccrib)
-
-Sources += $(CSources)
-
-##################################################################
+Sources += $(diagSources:%=diagrams/%)
 
 -include $(ms)/git.mk
 -include $(ms)/visual.mk
