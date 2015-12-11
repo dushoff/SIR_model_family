@@ -24,7 +24,7 @@ lecture.draft.pdf: lecture.txt
 ## Directories
 
 subdirs += data talkdir
-data = ../Disease_data/
+data = $(gitroot)/Disease_data/
 
 Makefile: $(subdirs)
 $(subdirs):
