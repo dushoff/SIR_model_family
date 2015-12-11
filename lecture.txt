@@ -19,7 +19,7 @@ Box models
 
 SUBH Divide people into categories:
 
-SCALEFIG 0.4 diagrams/sir.np.three.pdf
+DIAGRAM diagrams/sir.np.three.pdf
 
 	Susceptible $\to$ Infectious $\to$ Recovered
 
@@ -27,7 +27,7 @@ SCALEFIG 0.4 diagrams/sir.np.three.pdf
 
 What determines transition rates?
 
-SCALEFIG 0.4 diagrams/sir.three.pdf
+DIAGRAM diagrams/sir.three.pdf
 
 	People get better independently
 
@@ -37,7 +37,7 @@ SCALEFIG 0.4 diagrams/sir.three.pdf
 
 Conceptual modeling
 
-SCALEFIG 0.4 diagrams/sir.three.pdf
+DIAGRAM diagrams/sir.three.pdf
 
 SCALEFIG 0.6 thinker.jpg
 
@@ -45,7 +45,7 @@ SCALEFIG 0.6 thinker.jpg
 
 Conceptual modeling
 
-SCALEFIG 0.4 diagrams/sir.three.pdf
+DIAGRAM diagrams/sir.three.pdf
 
 	What is the final result?
 
@@ -53,9 +53,11 @@ SCALEFIG 0.4 diagrams/sir.three.pdf
 
 ----------------------------------------------------------------------
 
-Implementation
+Dynamic implementation
 
-SCALEFIG 0.4 diagrams/sir.three.pdf
+DIAGRAM diagrams/sir.three.pdf
+
+	Implementation requires assumptions about recovery and transmission
 
 	The conceptually \emph{simplest} way to implement this conceptual
 	model concretely is Ordinary Differential Equations (ODEs)
@@ -64,13 +66,11 @@ SCALEFIG 0.4 diagrams/sir.three.pdf
 
 		Or simpler in practice
 
-	Requires assumption about recovery and transmission
-
 ----------------------------------------------------------------------
 
 Recovery
 
-SCALEFIG 0.4 diagrams/sir.three.pdf
+DIAGRAM diagrams/sir.three.pdf
 
 	Infectious people recover at \emph{per capita}
 	rate $\gamma$ 
@@ -83,7 +83,7 @@ SCALEFIG 0.4 diagrams/sir.three.pdf
 
 Transmission
 
-SCALEFIG 0.4 diagrams/sir.three.pdf
+DIAGRAM diagrams/sir.three.pdf
 
 	Susceptible people get infected by:
 
@@ -94,15 +94,17 @@ SCALEFIG 0.4 diagrams/sir.three.pdf
 		Some of these contacts are effective (proportion $p$)
 
 	Per capita rate of becoming infected is $c p I/N$.  We write $\beta
-	I/N$ ($\beta = cp$)
+	I/N$
+	
+		($\beta = cp$)
 
-	Population-level transmission rate is $\beta SI/N$
+	Population-level transmission rate is ${\cal T} = \beta SI/N$
 
 ----------------------------------------------------------------------
 
 Another perspective on transmission
 
-SCALEFIG 0.4 diagrams/sir.three.pdf
+DIAGRAM diagrams/sir.three.pdf
 
 	Infectious people infect others by:
 
@@ -121,11 +123,9 @@ SCALEFIG 0.4 diagrams/sir.three.pdf
 
 ODE implementation
 
-SCALEFIG 0.4 diagrams/sir.three.pdf
+DIAGRAM diagrams/sir.three.pdf
 
-UP 0.7in
-
-SCALEFIG 0.8 diagrams/sirodes.const.pdf
+DIAGRAM diagrams/sirodes.const.pdf
 
 ----------------------------------------------------------------------
 
@@ -137,7 +137,7 @@ ODE assumptions
 
 BC
 
-SCALEFIG 0.45 stirrer.jpg
+SCALEFIG 0.8 stirrer.jpg
 
 NC
 
@@ -195,45 +195,41 @@ EC
 
 Population sizes
 
-SCALEFIG 0.4 diagrams/sir.three.pdf
+DIAGRAM diagrams/sir.three.pdf
 
-UP 0.7in
-
-SCALEFIG 0.8 diagrams/sirodes.const.pdf
+DIAGRAM diagrams/sirodes.const.pdf
 
 ----------------------------------------------------------------------
 
 Population sizes
 
-SCALEFIG 0.4 diagrams/sir.three.pdf
+DIAGRAM diagrams/sir.three.pdf
 
-UP 0.7in
-
-SCALEFIG 0.8 diagrams/sirodes.pdf
+DIAGRAM diagrams/sirodes.pdf
 
 ----------------------------------------------------------------------
 
 Standard incidence
 
-SCALEFIG 0.7 beta.Rout-0.pdf
+SCALEFIG 0.9 beta.Rout-0.pdf
 
 	$\beta(N) = \beta_0$
 
 	${\cal T} = \frac{\beta_0 SI}{N}$
 
-	Also known as frequency-dependent transmission
+	Also known as \emph{frequency-dependent} transmission
 
 ----------------------------------------------------------------------
 
 Mass action
 
-SCALEFIG 0.7 beta.Rout-1.pdf
+SCALEFIG 0.9 beta.Rout-1.pdf
 
 	$\beta(N) = \beta_1 N$
 
 	${\cal T} = \beta_1 SI$
 
-	Also known as density-dependent transmission
+	Also known as \emph{density-dependent} transmission
 
 ----------------------------------------------------------------------
 
@@ -263,13 +259,9 @@ Digression -- units
 
 Closing the circle
 
-SCALEFIG 0.5 diagrams/sirs.three.pdf
+DIAGRAM diagrams/sirs.three.pdf
 
-----------------------------------------------------------------------
-
-Births and deaths
-
-SCALEFIG 0.6 diagrams/sirbd.three.pdf
+DIAGRAM diagrams/sirbd.three.pdf
 
 ----------------------------------------------------------------------
 

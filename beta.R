@@ -1,4 +1,4 @@
-par(cex=2)
+par(cex=2, las=1)
 
 beta0 <- 0.5
 beta1 <- 0.1
