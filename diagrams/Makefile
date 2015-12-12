@@ -2,7 +2,7 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: sir.four.png 
+target pngtarget pdftarget vtarget acrtarget: sirbd.three.pdf 
 
 ##################################################################
 
@@ -17,7 +17,7 @@ include sources.mk
 
 ##################################################################
 
-sir.four.png: three.tex
+sirbd.three.pdf: three.tex
 
 %.three.tex: three.tex %.tex
 	perl -npe 's/figtmp/$*/' $< > $@

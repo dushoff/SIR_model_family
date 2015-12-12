@@ -267,13 +267,13 @@ DIAGRAM diagrams/sirbd.three.pdf
 
 Tendency to oscillate
 
-PFIG comp0.pdf
+PORTFIG comp0.pdf
 
 ----------------------------------------------------------------------
 
 With individuality
 
-PFIG comp.pdf
+PORTFIG comp.pdf
 
 ----------------------------------------------------------------------
 

@@ -17,7 +17,7 @@ include stuff.mk
 
 ## Slides
 
-Sources += lecture.txt
+Sources += lecture.txt beamer.fmt
 
 lecture.draft.pdf: lecture.txt
 
@@ -36,8 +36,8 @@ $(subdirs):
 
 include diagrams/sources.mk
 
-diagrams/%: /proc/uptime
-	cd diagrams && $(MAKE) $*
+diagrams/%.pdf: /proc/uptime
+	cd diagrams && $(MAKE) $*.pdf
 
 ##################################################################
 
