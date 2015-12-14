@@ -13,8 +13,8 @@ Sources = Makefile .gitignore README.md stuff.mk LICENSE.md
 ## Directories
 subdirs += data talkdir
 
-data = $(gitroot)/Disease_data/
-talkdir = $(ms)/talk/
+data = $(gitroot)/Disease_data
+talkdir = $(ms)/talk
 
 Makefile: $(ms) $(subdirs)
 
