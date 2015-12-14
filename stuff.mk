@@ -17,5 +17,5 @@ $(ms):
 	cd $(dir $(ms)) && git clone $(msrepo)/$(notdir $(ms)).git
 
 $(subdirs):
-	cd $(dir $($@)) && git clone $(msrepo)/$(notdir $($@)).git
+	$(MAKE) -f $(ms)/repos.mk $($@)
 	ln -s $($@) $@
