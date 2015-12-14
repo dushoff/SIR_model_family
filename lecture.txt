@@ -15,7 +15,7 @@ EC
 
 ----------------------------------------------------------------------
 
-Box models
+Compartmental models
 
 SUBH Divide people into categories:
 
@@ -57,10 +57,10 @@ Dynamic implementation
 
 DIAGRAM diagrams/sir.three.pdf
 
-	Implementation requires assumptions about recovery and transmission
+	Requires assumptions about recovery and transmission
 
-	The conceptually \emph{simplest} way to implement this conceptual
-	model concretely is Ordinary Differential Equations (ODEs)
+	The \emph{conceptually simplest} implementation uses
+	Ordinary Differential Equations (ODEs)
 
 		Other options may be more realistic
 
@@ -93,10 +93,8 @@ DIAGRAM diagrams/sir.three.pdf
 
 		Some of these contacts are effective (proportion $p$)
 
-	Per capita rate of becoming infected is $c p I/N$.  We write $\beta
+	Per capita rate of becoming infected is $c p I/N \equiv \beta
 	I/N$
-	
-		($\beta = cp$)
 
 	Population-level transmission rate is ${\cal T} = \beta SI/N$
 
@@ -114,10 +112,10 @@ DIAGRAM diagrams/sir.three.pdf
 
 		Some of these contacts are effective (proportion $p$)
 
-	Per capita rate of infecting others is $c p S/N$.  We write $\beta
+	Per capita rate of infecting others is $c p S/N \equiv \beta
 	S/N$
 
-	Population-level transmission rate is $\beta SI/N$
+	Population-level transmission rate is ${\cal T} = \beta SI/N$
 
 ----------------------------------------------------------------------
 
@@ -253,7 +251,7 @@ Digression -- units
 
 		Standard incidence, $\beta_0: [1/\mathrm{time}]$
 
-		Mass-action incidence, $\beta_0: [1/\mathrm{time}]$
+		Mass-action incidence, $\beta_1: [1/\mathrm{time}]$
 
 ----------------------------------------------------------------------
 
