@@ -21,6 +21,11 @@ Sources += lecture.txt beamer.fmt
 
 lecture.draft.pdf: lecture.txt
 
+Archive += $(wildcard *.slides.pdf)
+
+%.slides.pdf: lecture.draft.pdf
+	$(copy)
+
 ## Directories
 
 subdirs += data talkdir
