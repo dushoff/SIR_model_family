@@ -21,9 +21,9 @@ Sources += lecture.txt beamer.fmt
 
 lecture.draft.pdf: lecture.txt
 
-Archive += $(wildcard *.slides.pdf)
+Archive += SIR.slides.pdf
 
-%.slides.pdf: lecture.draft.pdf
+SIR.slides.pdf: lecture.draft.pdf
 	$(copy)
 
 ## Directories
