@@ -36,10 +36,9 @@ archive:
 
 subdirs += data talkdir
 data = $(gitroot)/Disease_data/
+talkdir = $(ms)/talk/
 
-Makefile: $(subdirs)
-$(subdirs):
-	ln -s $($@) $@
+Makefile: $(ms) $(subdirs)
 
 ##################################################################
 
