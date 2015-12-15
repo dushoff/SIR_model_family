@@ -73,7 +73,7 @@ Recovery
 DIAGRAM diagrams/sir.three.pdf
 
 	Infectious people recover at \emph{per capita}
-	rate $\gamma$ 
+	rate $\gamma$
 
 		Total recovery rate is $\gamma I$
 
@@ -251,7 +251,7 @@ Digression -- units
 
 		Standard incidence, $\beta_0: [1/\mathrm{time}]$
 
-		Mass-action incidence, $\beta_1: [1/\mathrm{time}]$
+		Mass-action incidence, $\beta_1: [1/(\mathrm{people} \cdot \mathrm{time})]$
 
 ----------------------------------------------------------------------
 
@@ -277,7 +277,7 @@ PORTFIG comp.pdf
 
 Summary
 
-	Dynamics are an esssential tool to link scales
+	Dynamics are an essential tool to link scales
 
 	Very simple models can provide useful insights
 
@@ -291,4 +291,3 @@ Conclusions from simple models
 	Threshold behaviour
 
 	Tendency to oscillate
-
