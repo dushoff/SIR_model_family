@@ -2,18 +2,19 @@
 ### Hooks for the editor to set the default target
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: lecture.draft.pdf 
+target pngtarget pdftarget vtarget acrtarget: SIR.slides.pdf 
 
 ##################################################################
 
 # make files
 
 
-Sources = Makefile .gitignore README.md stuff.mk LICENSE.md
+Sources = Makefile .gitignore README.md stuff.mk subdirs.mk LICENSE.md
 
 ## includes
 
 include stuff.mk
+include subdirs.mk
 -include $(ms)/talk.def
 -include $(ms)/perl.def
 
@@ -25,7 +26,8 @@ Sources += lecture.txt beamer.fmt
 
 lecture.draft.pdf: lecture.txt
 
-Archive += SIR.slides.pdf $(wildcard archive/*)
+# Archive += SIR.slides.pdf
+Archive += $(wildcard archive/*)
 
 SIR.slides.pdf: lecture.draft.pdf
 	$(copy)
