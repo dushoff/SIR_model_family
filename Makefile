@@ -8,7 +8,14 @@ target pngtarget pdftarget vtarget acrtarget: lecture.draft.pdf
 
 # make files
 
+
 Sources = Makefile .gitignore README.md stuff.mk LICENSE.md
+
+## includes
+
+include stuff.mk
+-include $(ms)/talk.def
+-include $(ms)/perl.def
 
 ## Directories
 subdirs += data talkdir
@@ -17,12 +24,6 @@ data = $(gitroot)/Disease_data
 talkdir = $(ms)/talk
 
 Makefile: $(ms) $(subdirs)
-
-## includes
-
-include stuff.mk
--include $(ms)/talk.def
--include $(ms)/perl.def
 
 ##################################################################
 
