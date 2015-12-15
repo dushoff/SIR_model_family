@@ -17,14 +17,6 @@ include stuff.mk
 -include $(ms)/talk.def
 -include $(ms)/perl.def
 
-## Directories
-subdirs += data talkdir
-
-data = $(gitroot)/Disease_data
-talkdir = $(ms)/talk
-
-Makefile: $(ms) $(subdirs)
-
 ##################################################################
 
 ## Slides
@@ -51,7 +43,7 @@ archive:
 include diagrams/sources.mk
 
 diagrams/%.pdf: /proc/uptime
-	cd diagrams && $(MAKE) $*.pdf
+	cd diagrams && make $*.pdf
 
 ##################################################################
 
