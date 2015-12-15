@@ -16,6 +16,6 @@ Makefile: $(ms)
 $(ms):
 	cd $(dir $(ms)) && git clone $(msrepo)/$(notdir $(ms)).git
 
-$(subdirs):
+$(subdirs): $(ms)
 	$(MAKE) -f $(ms)/repos.mk $($@)
 	ln -s $($@) $@
