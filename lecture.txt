@@ -1,4 +1,22 @@
 
+The SIR Model Family
+
+\vfill
+
+Jonathan Dushoff, McMaster University
+
+\url{http://lalashan.mcmaster.ca/DushoffLab}
+
+\vfill
+
+DAIDD 2015
+
+\url{http://www.ici3d.org/daidd/}
+
+\vfill
+
+----------------------------------------------------------------------
+
 Dynamic modeling
 
 SUBH Connects scales
@@ -127,7 +145,11 @@ DIAGRAM diagrams/sirodes.const.pdf
 
 ----------------------------------------------------------------------
 
-Spreadsheet example
+Spreadsheet implementation
+
+DIAGRAM diagrams/sir.three.pdf
+
+\url{http://tinyurl.com/SIR-DAIDD-2015}
 
 ----------------------------------------------------------------------
 

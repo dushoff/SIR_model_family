@@ -29,8 +29,8 @@ lecture.draft.pdf: lecture.txt
 # Archive += SIR.slides.pdf
 Archive += $(wildcard archive/*)
 
-SIR.slides.pdf: lecture.draft.pdf
-	$(copy)
+SIR.slides.pdf: $(subdirs) lecture.draft.pdf
+	$(CP) lecture.draft.pdf $@
 
 archive/%: SIR.slides.pdf archive 
 	$(copy)
