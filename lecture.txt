@@ -37,7 +37,7 @@ Compartmental models
 
 SUBH Divide people into categories:
 
-DIAGRAM sir.np.three.pdf
+DIAGRAM sir.three.pdf
 
 	Susceptible $\to$ Infectious $\to$ Recovered
 
