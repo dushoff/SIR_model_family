@@ -1,5 +1,6 @@
 # SIR_model_family
 ### Hooks for the editor to set the default target
+
 current: target
 
 target pngtarget pdftarget vtarget acrtarget: lecture.draft.pdf 
@@ -7,7 +8,6 @@ target pngtarget pdftarget vtarget acrtarget: lecture.draft.pdf
 ##################################################################
 
 # make files
-
 
 Sources = Makefile .gitignore README.md stuff.mk subdirs.mk LICENSE.md
 
@@ -17,6 +17,13 @@ include stuff.mk
 include subdirs.mk
 -include $(ms)/talk.def
 -include $(ms)/perl.def
+
+##################################################################
+
+## Dev
+
+test.deps: test.draft.tex ../makestuff/latexdeps.pl
+	$(PUSH)
 
 ##################################################################
 
@@ -40,12 +47,20 @@ archive:
 
 ##################################################################
 
-## Diagrams
+Sources += boxes.tex vectors.tex tikzlib.tex sir.tex sirodes.tex sirs.tex sirbd.tex msir.tex seir.tex seird.tex three.tex threepage.tex fourpage.tex nopoint.pl Makefile sources.mk
 
-include diagrams/sources.mk
+%.three.tex: three.tex %.tex
+	perl -npe 's/figtmp/$*/' $< > $@
 
-diagrams/%.pdf: /proc/uptime
-	cd diagrams && make $*.pdf
+%.four.tex: four.tex %.tex
+	perl -npe 's/figtmp/$*/' $< > $@
+
+four.tex: three.tex 
+	perl -npe 's/threepage/fourpage/' $< > $@
+
+# Remove (N) from β for less intimidation
+sirodes.const.tex: sirodes.tex 
+	perl -npe 's/\(N\)//' $< > $@
 
 ##################################################################
 
@@ -75,8 +90,6 @@ stirrer.jpg: stirrer.large.jpg
 	convert -scale 25% $< $@
 
 ##################################################################
-
-Sources += $(diagSources:%=diagrams/%)
 
 -include $(ms)/git.mk
 -include $(ms)/visual.mk

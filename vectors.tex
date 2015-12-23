@@ -1,0 +1,46 @@
+\newcommand{\sirvec}{ 
+	\draw[->, very thick] (S) to (I); 
+	\draw[->, very thick] (I) to (R); 
+}
+
+\newcommand{\seirvec}{ 
+	\draw[->, very thick] (S) to (E); 
+	\draw[->, very thick] (E) to (I); 
+	\draw[->, very thick] (I) to (R); 
+}
+
+\newcommand{\idvec}{ 
+	\draw[->, very thick] (I) to (D); 
+}
+
+\newcommand{\sirbd}{ 
+	\node(b)[above=of S]{};
+	\node(mS)[below=of S]{};
+	\node(mI)[below=of I]{};
+	\node(mR)[below=of R]{};
+
+	\draw[->, very thick, black!50!green] (b) to (S); 
+	\draw[->, very thick, black!50!green] (S) to (mS); 
+	\draw[->, very thick, black!50!green] (I) to (mI); 
+	\draw[->, very thick, black!50!green] (R) to (mR); 
+}
+
+\newcommand{\sirs}{ 
+	\draw[->, very thick] (R) 
+		to [bend left=45] (S); 
+}
+
+\newcommand{\isipoint}{
+	\draw[->, blue, dashed, very thick] (I)
+		to [bend left=45] (SI);
+}
+
+\newcommand{\isepoint}{
+	\draw[->, blue, dashed, very thick] (I)
+		to [bend right=60] (SE);
+}
+
+\newcommand{\dsepoint}{
+	\draw[->, blue, dashed, very thick] (D)
+		to [bend left=40] (SE);
+}

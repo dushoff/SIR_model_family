@@ -37,7 +37,7 @@ Compartmental models
 
 SUBH Divide people into categories:
 
-DIAGRAM diagrams/sir.np.three.pdf
+DIAGRAM sir.np.three.pdf
 
 	Susceptible $\to$ Infectious $\to$ Recovered
 
@@ -45,7 +45,7 @@ DIAGRAM diagrams/sir.np.three.pdf
 
 What determines transition rates?
 
-DIAGRAM diagrams/sir.three.pdf
+DIAGRAM sir.three.pdf
 
 	People get better independently
 
@@ -55,7 +55,7 @@ DIAGRAM diagrams/sir.three.pdf
 
 Conceptual modeling
 
-DIAGRAM diagrams/sir.three.pdf
+DIAGRAM sir.three.pdf
 
 SCALEFIG 0.6 thinker.jpg
 
@@ -63,7 +63,7 @@ SCALEFIG 0.6 thinker.jpg
 
 Conceptual modeling
 
-DIAGRAM diagrams/sir.three.pdf
+DIAGRAM sir.three.pdf
 
 	What is the final result?
 
@@ -73,7 +73,7 @@ DIAGRAM diagrams/sir.three.pdf
 
 Dynamic implementation
 
-DIAGRAM diagrams/sir.three.pdf
+DIAGRAM sir.three.pdf
 
 	Requires assumptions about recovery and transmission
 
@@ -88,7 +88,7 @@ DIAGRAM diagrams/sir.three.pdf
 
 Recovery
 
-DIAGRAM diagrams/sir.three.pdf
+DIAGRAM sir.three.pdf
 
 	Infectious people recover at \emph{per capita}
 	rate $\gamma$
@@ -101,7 +101,7 @@ DIAGRAM diagrams/sir.three.pdf
 
 Transmission
 
-DIAGRAM diagrams/sir.three.pdf
+DIAGRAM sir.three.pdf
 
 	Susceptible people get infected by:
 
@@ -120,7 +120,7 @@ DIAGRAM diagrams/sir.three.pdf
 
 Another perspective on transmission
 
-DIAGRAM diagrams/sir.three.pdf
+DIAGRAM sir.three.pdf
 
 	Infectious people infect others by:
 
@@ -139,15 +139,15 @@ DIAGRAM diagrams/sir.three.pdf
 
 ODE implementation
 
-DIAGRAM diagrams/sir.three.pdf
+DIAGRAM sir.three.pdf
 
-DIAGRAM diagrams/sirodes.const.pdf
+DIAGRAM sirodes.const.pdf
 
 ----------------------------------------------------------------------
 
 Spreadsheet implementation
 
-DIAGRAM diagrams/sir.three.pdf
+DIAGRAM sir.three.pdf
 
 \url{http://tinyurl.com/SIR-DAIDD-2015}
 
@@ -215,17 +215,17 @@ EC
 
 Population sizes
 
-DIAGRAM diagrams/sir.three.pdf
+DIAGRAM sir.three.pdf
 
-DIAGRAM diagrams/sirodes.const.pdf
+DIAGRAM sirodes.const.pdf
 
 ----------------------------------------------------------------------
 
 Population sizes
 
-DIAGRAM diagrams/sir.three.pdf
+DIAGRAM sir.three.pdf
 
-DIAGRAM diagrams/sirodes.pdf
+DIAGRAM sirodes.pdf
 
 ----------------------------------------------------------------------
 
@@ -279,9 +279,9 @@ Digression -- units
 
 Closing the circle
 
-DIAGRAM diagrams/sirs.three.pdf
+DIAGRAM sirs.three.pdf
 
-DIAGRAM diagrams/sirbd.three.pdf
+DIAGRAM sirbd.three.pdf
 
 ----------------------------------------------------------------------
 

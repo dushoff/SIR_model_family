@@ -1,0 +1,36 @@
+\newcommand{\sirboxes}{
+	\node(S)[bigcompartment]{S};
+	\node(SI)[right=of S]{};
+	\node(I)[bigcompartment, right=of SI]{I};
+	\node(IR)[right=of I]{};
+	\node(R)[bigcompartment, right=of IR]{R};
+}
+
+\newcommand{\seirboxes}{
+	\node(S)[bigcompartment]{S};
+	\node(SE)[right=of S]{};
+	\node(E)[bigcompartment, right=of SE]{E};
+	\node(EI)[right=of E]{};
+	\node(I)[bigcompartment, right=of EI]{I};
+	\node(IR)[right=of I]{};
+	\node(R)[bigcompartment, right=of IR]{R};
+}
+
+\newcommand{\seirdboxes}{
+	\node(S)[bigcompartment]{S};
+	\node(SE)[right=of S]{};
+	\node(E)[bigcompartment, right=of SE]{E};
+	\node(EI)[right=of E]{};
+	\node(I)[bigcompartment, right=of EI]{I};
+	\node(IR)[right=of I]{};
+	\node(R)[bigcompartment, above right=of IR]{R};
+	\node(D)[bigcompartment, below right=of IR]{D};
+}
+
+\newcommand{\msirboxes}{
+	\node(S1)[bigcompartment]{$S_1$};
+	\node(SI1)[right=of S1]{};
+	\node(I1)[bigcompartment, right=of SI1]{$I_1$};
+	\node(IR1)[right=of I1]{};
+	\node(R1)[bigcompartment, right=of IR1]{$R_1$};
+}
