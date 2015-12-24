@@ -8,6 +8,7 @@ target pngtarget pdftarget vtarget acrtarget: .deps .deps/lecture.draft.tex.d le
 ##################################################################
 
 newdir:
+	$(MAKE) subdirs
 	$(MAKE) .deps .deps/lecture.draft.tex.d 
 	$(MAKE) lecture.draft.pdf
 
