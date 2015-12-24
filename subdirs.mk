@@ -4,7 +4,7 @@ subdirs += data talkdir
 data = $(gitroot)/Disease_data
 talkdir = $(ms)/talk
 
-data/%:
+data/%: data
 	cd data && $(MAKE) $*
 
 Makefile: $(ms)
