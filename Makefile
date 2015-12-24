@@ -1,8 +1,6 @@
 # SIR_model_family
 ### Hooks for the editor to set the default target
 
-newdir:
-
 current: target
 
 target pngtarget pdftarget vtarget acrtarget: .deps .deps/lecture.draft.tex.d lecture.draft.pdf
