@@ -1,11 +1,17 @@
 # SIR_model_family
 ### Hooks for the editor to set the default target
 
+newdir:
+
 current: target
 
-target pngtarget pdftarget vtarget acrtarget: lecture.draft.pdf 
+target pngtarget pdftarget vtarget acrtarget: .deps .deps/lecture.draft.tex.d lecture.draft.pdf
 
 ##################################################################
+
+newdir:
+	$(MAKE) .deps .deps/lecture.draft.tex.d 
+	$(MAKE) lecture.draft.pdf
 
 # make files
 

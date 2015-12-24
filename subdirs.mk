@@ -1,7 +1,6 @@
 
-## Directories
+## Directories to be linked for latex
 subdirs += data talkdir
-
 data = $(gitroot)/Disease_data
 talkdir = $(ms)/talk
 
@@ -16,4 +15,3 @@ $(subdirs):
 	$(MAKE) -f $(ms)/repos.mk $($@)
 	-$(RM) $@
 	ln -s $($@) $@
-
