@@ -67,6 +67,9 @@ four.tex: three.tex
 sirodes.const.tex: sirodes.tex 
 	perl -npe 's/\(N\)//' $< > $@
 
+diagrams/%: diagrams
+	cd diagrams && $(MAKE) $*
+
 ##################################################################
 
 ## Simulations
