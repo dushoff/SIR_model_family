@@ -10,7 +10,9 @@ newdir:
 	$(MAKE) Makefile
 	$(MAKE) lecture.draft.tex.deps
 
-$(ms)/linux.mk: $(ms)
-ifeq ($(shell uname), Linux)
+$(ms)/unix.mk $(ms)/linux.mk: $(ms)
+ifeq ($(shell uname), Finux)
 include $(ms)/linux.mk
+else
+include $(ms)/unix.mk
 endif
