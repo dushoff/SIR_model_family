@@ -4,7 +4,7 @@ This is my first attempt at a self-contained self-making repo. It will download 
 
 try:
 
-   git clone https://github.com/dushoff/SIR_model_family.git
+	git clone https://github.com/dushoff/SIR_model_family.git
 	cd SIR_model_family
 	make newdir
 	make
