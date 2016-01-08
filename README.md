@@ -13,6 +13,6 @@ The "make newdir" line is not so aesthetic, and not completely necessary, but it
 
 If you are on ubuntu, or something with similar flavor and window system, you can try 
 
-	make pdftarget
+	make vtarget
 
 to remake and open the default target, lecture.draft.pdf. Otherwise, you would have to open it yourself.
