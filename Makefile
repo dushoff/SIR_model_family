@@ -38,7 +38,7 @@ archive:
 
 ##################################################################
 
-Sources += boxes.tex vectors.tex tikzlib.tex sir.tex sirodes.tex sirs.tex sirbd.tex msir.tex seir.tex seird.tex three.tex threepage.tex fourpage.tex nopoint.pl Makefile sources.mk
+Sources += boxes.tex vectors.tex tikzlib.tex sir.tex sirodes.tex sirs.tex sirbd.tex msir.tex seir.tex seird.tex three.tex threepage.tex fourpage.tex brides.tex nopoint.pl Makefile sources.mk
 
 %.three.tex: three.tex %.tex
 	perl -npe 's/figtmp/$*/' $< > $@
