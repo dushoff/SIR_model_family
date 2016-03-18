@@ -2,6 +2,9 @@
 ### Hooks for the editor to set the default target
 
 target pngtarget pdftarget vtarget acrtarget: lecture.draft.pdf
+current: newdir
+
+target pngtarget pdftarget vtarget acrtarget: lecture.draft.pdf 
 
 ##################################################################
 
