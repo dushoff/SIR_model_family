@@ -43,6 +43,10 @@ archive:
 
 Sources += boxes.tex vectors.tex tikzlib.tex sir.tex sirodes.tex sirs.tex sirbd.tex msir.tex seir.tex seird.tex three.tex threepage.tex fourpage.tex brides.tex nopoint.pl Makefile sources.mk
 
+## Seems not to chain right with three. (I had to  make an intermediate manually)
+%.np.tex: %.tex
+	perl -ne 'print unless /isipoint/' $< > $@
+
 %.three.tex: three.tex %.tex
 	perl -npe 's/figtmp/$*/' $< > $@
 
