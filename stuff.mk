@@ -8,6 +8,7 @@ Drop = ~/Dropbox
 export ms = $(gitroot)/makestuff
 -include $(ms)/os.mk
 
+subdirs += data talkdir
 Makefile: $(ms) $(subdirs)
 
 $(ms):
