@@ -9,9 +9,9 @@ Jonathan Dushoff, McMaster University
 
 \vfill
 
-DAIDD 2015
+MMED 2016
 
-\url{http://www.ici3d.org/daidd/}
+\url{http://www.ici3d.org/mmed/}
 
 \vfill
 
@@ -149,7 +149,7 @@ Spreadsheet implementation
 
 DIAGRAM sir.three.pdf
 
-\url{http://tinyurl.com/SIR-DAIDD-2015}
+\url{http://tinyurl.com/SIR-MMED-2016}
 
 ----------------------------------------------------------------------
 
@@ -204,6 +204,10 @@ SCALEFIG 0.45 trans.jpg
 NC
 
 	$\beta = pc$
+
+		What is a contact?
+
+		What is the probability of transmission?
 
 	Sometimes this decomposition is clear
 
@@ -310,6 +314,19 @@ Summary
 
 Conclusions from simple models
 
-	Threshold behaviour
+	There is a link between individual-level processes and population-level
+	outcomes
 
-	Tendency to oscillate
+	The reproductive number (number of cases per case) is a key quantity
+
+		Disease increases when $\Rx>1$
+
+		Decreases when $\Rx<1$
+
+	Oscillation
+
+		If susceptibles are replenished, diseases have a tendency to oscillate
+
+		These oscillations tend to be damped (get smaller through time)
+
+	These conclusions from \textbf{simple} models help \emph{guide} our understanding of more complicated models

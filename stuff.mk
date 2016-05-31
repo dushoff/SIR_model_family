@@ -10,6 +10,3 @@ export ms = $(gitroot)/makestuff
 
 subdirs += data talkdir
 Makefile: $(ms) $(subdirs)
-
-$(ms):
-	cd $(dir $(ms)) && git clone $(msrepo)/$(notdir $(ms)).git

@@ -1,10 +1,10 @@
 # SIR_model_family
 ### Hooks for the editor to set the default target
 
-target pngtarget pdftarget vtarget acrtarget: lecture.draft.pdf
+target pngtarget pdftarget vtarget acrtarget: mmed_push 
 current: newdir
 
-target pngtarget pdftarget vtarget acrtarget: lecture.draft.pdf 
+target pngtarget pdftarget vtarget acrtarget: mmed_push 
 
 ##################################################################
 
@@ -91,6 +91,9 @@ stirrer.jpg: stirrer.large.jpg
 	convert -scale 25% $< $@
 
 ##################################################################
+
+mmed_push: lecture.draft.pdf
+	/bin/cp -f $< ~/git/MMED2016/pages/lectures/FoundationsDM.pdf
 
 -include $(ms)/git.mk
 -include $(ms)/visual.mk
