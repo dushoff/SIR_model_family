@@ -1,10 +1,10 @@
 # SIR_model_family
 ### Hooks for the editor to set the default target
 
-target pngtarget pdftarget vtarget acrtarget: mmed_push 
+target pngtarget pdftarget vtarget acrtarget: brides.four.pdf 
 current: newdir
 
-target pngtarget pdftarget vtarget acrtarget: mmed_push 
+target pngtarget pdftarget vtarget acrtarget: brides.four.pdf 
 
 ##################################################################
 
@@ -62,6 +62,8 @@ sirodes.const.tex: sirodes.tex
 
 diagrams/%: diagrams
 	cd diagrams && $(MAKE) $*
+
+brides.four.pdf:
 
 ##################################################################
 
