@@ -1,5 +1,5 @@
 msrepo = https://github.com/dushoff
-gitroot = ./
+gitroot = ./gitroot
 export ms = $(gitroot)/makestuff
 Drop = ~/Dropbox
 
@@ -8,5 +8,12 @@ Drop = ~/Dropbox
 export ms = $(gitroot)/makestuff
 -include $(ms)/os.mk
 
-subdirs += data talkdir
 Makefile: $(ms) $(subdirs)
+
+$(gitroot):
+	mkdir $@
+
+$(ms):
+	mkdir $(gitroot)
+	cd $(dir $(ms)) && git clone $(msrepo)/$(notdir $(ms)).git
+

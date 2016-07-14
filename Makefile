@@ -2,21 +2,17 @@
 ### Hooks for the editor to set the default target
 
 target pngtarget pdftarget vtarget acrtarget: brides.four.pdf 
-current: newdir
-
-target pngtarget pdftarget vtarget acrtarget: brides.four.pdf 
 
 ##################################################################
 
 # make files
 
-Sources = Makefile .gitignore README.md stuff.mk subdirs.mk LICENSE.md
+Sources = Makefile .gitignore README.md stuff.mk LICENSE.md
 
 ## includes
 
 include stuff.mk
-include subdirs.mk
--include $(ms)/talk.def
+-include $(ms)/newtalk.def
 -include $(ms)/perl.def
 
 ##################################################################
@@ -102,4 +98,4 @@ mmed_push: lecture.draft.pdf
 
 -include $(ms)/wrapR.mk
 -include $(ms)/newlatex.mk
--include $(ms)/talk.mk
+-include $(ms)/newtalk.mk
