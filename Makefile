@@ -2,7 +2,7 @@
 ### Hooks for the editor to set the default target
 
 current:target
-target pngtarget pdftarget vtarget acrtarget: brides.four.pdf 
+target pngtarget pdftarget vtarget acrtarget: SIR.slides.pdf 
 
 ##################################################################
 
