@@ -54,6 +54,13 @@ survival.Rout: survival.R
 ## Phenomenological heterogeneity
 phen.Rout: phen.R
 
+## What to do about svg images in new image world?
+network.png: network.svg
+	convert $< $@
+
+network.svg:
+	wget -O $@ "http://upload.wikimedia.org/wikipedia/commons/6/68/Social-network.svg"
+
 ##################################################################
 
 ## Make pictures with boxes, and associated equations; this was mostly me trying to learn tikz, without much success.
