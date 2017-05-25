@@ -6,6 +6,12 @@ current:target
 
 ##################################################################
 
+## To do: 
+
+#### Clean out the talk stuff from this directory and make it a place for SIR modeling resources
+
+#### Find the C code for the onestoch family of pictures and put it here. Or somewhere …
+
 # make files
 
 Sources = Makefile .gitignore README.md sub.mk LICENSE.md
@@ -37,6 +43,20 @@ archive:
 	mkdir $@
 
 ##################################################################
+
+## Simple R pictures for associated talks
+
+Sources += $(wildcard *.R)
+
+## Exponential and gamma survival
+survival.Rout: survival.R
+
+## Phenomenological heterogeneity
+phen.Rout: phen.R
+
+##################################################################
+
+## Make pictures with boxes, and associated equations; this was mostly me trying to learn tikz, without much success.
 
 Sources += boxes.tex vectors.tex tikzlib.tex sir.tex sirodes.tex sirs.tex sirbd.tex msir.tex seir.tex seird.tex three.tex threepage.tex fourpage.tex brides.tex nopoint.pl Makefile sources.mk
 
