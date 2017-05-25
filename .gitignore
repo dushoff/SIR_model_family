@@ -1,4 +1,4 @@
-commit.txt
+commit.time
 .*.sw*
 
 *.pdf
@@ -8,6 +8,12 @@ commit.txt
 .*.aux
 *.blg
 *.bbl
+
+*.draft.*
+*.deps
+*.three.*
+*.four.*
+*.const.*
 
 *out
 *.RData
