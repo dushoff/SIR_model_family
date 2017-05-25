@@ -23,6 +23,13 @@ commit.time
 
 *.wrapR.*
 
+local.txt.format
+stirrer.jpg
+stirrer.large.jpg
+talkdir
+target.mk
+thinker.jpg
+
 local.mk
 
 testdir/

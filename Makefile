@@ -8,11 +8,11 @@ current:target
 
 # make files
 
-Sources = Makefile .gitignore README.md stuff.mk LICENSE.md
+Sources = Makefile .gitignore README.md sub.mk LICENSE.md
 
 ## includes
 
-include stuff.mk
+include sub.mk
 -include $(ms)/newtalk.def
 -include $(ms)/perl.def
 
