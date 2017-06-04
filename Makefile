@@ -63,6 +63,12 @@ network.svg:
 
 ##################################################################
 
+### Testing quick diagram
+
+quick.pdf: quick.tex
+
+##################################################################
+
 ## Make pictures with boxes, and associated equations; this was mostly me trying to learn tikz, without much success.
 
 Sources += boxes.tex vectors.tex tikzlib.tex sir.tex sirodes.tex sirs.tex sirbd.tex msir.tex seir.tex seird.tex three.tex threepage.tex fourpage.tex brides.tex nopoint.pl Makefile sources.mk
