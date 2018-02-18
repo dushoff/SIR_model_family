@@ -131,5 +131,5 @@ mmed_push: lecture.draft.pdf
 -include $(ms)/visual.mk
 
 -include $(ms)/wrapR.mk
--include $(ms)/newlatex.mk
+-include $(ms)/texdeps.mk
 -include $(ms)/newtalk.mk
