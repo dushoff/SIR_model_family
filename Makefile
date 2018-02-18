@@ -77,12 +77,15 @@ Sources += boxes.tex vectors.tex tikzlib.tex sir.tex sirodes.tex sirs.tex sirbd.
 %.np.tex: %.tex
 	perl -ne 'print unless /isipoint/' $< > $@
 
+Ignore += *.three.tex
 %.three.tex: three.tex %.tex
 	perl -npe 's/figtmp/$*/' $< > $@
 
+Ignore += *.four.tex
 %.four.tex: four.tex %.tex
 	perl -npe 's/figtmp/$*/' $< > $@
 
+Ignore += four.tex
 four.tex: three.tex 
 	perl -npe 's/threepage/fourpage/' $< > $@
 
