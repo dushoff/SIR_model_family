@@ -127,8 +127,14 @@ stirrer.jpg: stirrer.large.jpg
 
 ##################################################################
 
-mmed_push: lecture.draft.pdf
-	/bin/cp -f $< ~/git/MMED2016/pages/lectures/FoundationsDM.pdf
+## Diagrammatic
+
+steps.Rout: steps.R
+
+generationTime.Rout: generationTime.R
+
+######################################################################
+
 
 -include $(ms)/git.mk
 -include $(ms)/visual.mk
