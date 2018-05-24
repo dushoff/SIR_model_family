@@ -90,6 +90,7 @@ four.tex: three.tex
 	perl -npe 's/threepage/fourpage/' $< > $@
 
 # Remove (N) from β for less intimidation
+Ignore += *.const.tex
 sirodes.const.tex: sirodes.tex 
 	perl -npe 's/\(N\)//' $< > $@
 
@@ -115,6 +116,8 @@ Sources += onestoch.pdf onesto.pdf comp0.pdf comp.pdf onedet.pdf
 ## Pictures
 
 Sources += trans.jpg gd.png R.png
+
+Ignore += thinker.jpg stirrer.large.jpg stirrer.jpg 
 
 thinker.jpg: 
 	wget -O $@ "http://si.smugmug.com/2008/Lighting-experiments/i-9g8KcQZ/1/L/cycladic%20thinker-L.jpg"
