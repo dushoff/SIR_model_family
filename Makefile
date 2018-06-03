@@ -55,6 +55,7 @@ survival.Rout: survival.R
 phen.Rout: phen.R
 
 ## What to do about svg images in new image world?
+Ignore += network.png network.svg
 network.png: network.svg
 	convert $< $@
 
