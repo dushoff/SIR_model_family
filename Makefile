@@ -72,7 +72,15 @@ quick.pdf: quick.tex
 
 ## Make pictures with boxes, and associated equations; this was mostly me trying to learn tikz, without much success.
 
-Sources += boxes.tex vectors.tex tikzlib.tex sir.tex sirodes.tex sirs.tex sirbd.tex msir.tex seir.tex seird.tex three.tex threepage.tex fourpage.tex brides.tex nopoint.pl Makefile sources.mk
+## Not really ordered 
+Sources += boxes.tex vectors.tex tikzlib.tex sir.tex
+Sources += sirs.tex sirbd.tex msir.tex seir.tex seird.tex three.tex threepage.tex fourpage.tex brides.tex nopoint.pl Makefile sources.mk
+
+## Equation diagrams
+Sources += sirodes.tex sirbdodes.tex sirbdrates.tex
+
+## sirbdrates.pdf: sirbdrates.tex
+## sirbdodes.pdf: sirbdodes.tex
 
 ## Seems not to chain right with three. (I had to  make an intermediate manually)
 %.np.tex: %.tex
