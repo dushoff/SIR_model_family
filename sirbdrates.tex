@@ -8,15 +8,12 @@
 \begin{document}
 
 \begin{center}\begin{tabular}{llll}
-   {\bf Event} & {\bf transition} &{\bf rate} &{\bf Effect $(S,I)$}\\
-   \hline
-   Infection &$S \to I$  &$R_0 SI/N$ & $(-1,1)$\\
-   Recovery & $I \to R$ & $(1-\rho)I$ & $(0,-1)$\\
-	R
-
-
-   Rebirth &  $R \to S$ & $\rho (N-S-I)$ & $(1,0)$\\
-   Rebirth & $I \to S$ & $\rho I$ & $(1,-1)$
+   {\bf Event} & {\bf transition} &{\bf rate} &{\bf Effect $(S,I)$}
+   \\ \hline
+   \\ Infection &$S \to I$  &$\beta SI/N$ & $(-1,1)$
+   \\ Recovery & $I \to R$ & $\gamma I$ & $(0,-1)$
+   \\ Rebirth &  $R \to S$ & $\mu (N-S-I)$ & $(1,0)$
+   \\ Rebirth & $I \to S$ & $\mu I$ & $(1,-1)$
 \end{tabular}\end{center}
 
 \end{document}
