@@ -24,23 +24,11 @@ include sub.mk
 
 ##################################################################
 
-## Slides
+## Slides Cleaned out 2018 Dec 18 (Tue)
 
-Sources += lecture.txt beamer.fmt
+## git rm lecture.txt beamer.fmt
 
-lecture.draft.pdf: lecture.txt
-
-# Archive += SIR.slides.pdf
 Archive += $(wildcard archive/*)
-
-SIR.slides.pdf: $(subdirs) lecture.draft.pdf
-	$(CP) lecture.draft.pdf $@
-
-archive/%: SIR.slides.pdf archive 
-	$(copy)
-
-archive:
-	mkdir $@
 
 ##################################################################
 
@@ -61,6 +49,10 @@ network.png: network.svg
 
 network.svg:
 	wget -O $@ "http://upload.wikimedia.org/wikipedia/commons/6/68/Social-network.svg"
+
+## Simpson mixing illustration
+
+simpson.Rout: simpson.R
 
 ##################################################################
 
