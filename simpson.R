@@ -1,7 +1,7 @@
 set.seed(2131)
 popSize <- 1e4
 cbar <- 1
-kap <- 2
+kap <- 1
 
 c <- rgamma(popSize, shape=1/kap, scale=cbar*kap)
 surv <- rexp(popSize, rate=c)
@@ -17,13 +17,16 @@ popHist <- function(c, title, breaks=NULL, counts=NULL){
 		, breaks = breaks
 		, ylim = counts
 	)
-	abline(v=mean(c), col="red")
+	abline(v=mean(c), col="red", lwd=2)
 	return(h)
 }
 
-h0 <- popHist(c, "Population")
+dev.off(); pdf(pdfname, height=6, width=7)
 
 par(mfrow=c(1, 2))
+
+h0 <- popHist(c, "Population")
+popHist(c, "Population")
 
 for (q in cuts){
 	popHist(c[surv>q], "Susceptible", h0$breaks, h0$counts)
