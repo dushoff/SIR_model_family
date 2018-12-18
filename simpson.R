@@ -5,7 +5,7 @@ kap <- 2
 
 c <- rgamma(popSize, shape=1/kap, scale=cbar*kap)
 surv <- rexp(popSize, rate=c)
-cuts <- quantile(surv, probs=c(0.05, 0.25, 0.5))
+cuts <- quantile(surv, probs=c(0.05, 0.2, 0.5))
 mix <- "Effective mixing rate"
 
 popHist <- function(c, title, breaks=NULL, counts=NULL){
