@@ -116,7 +116,8 @@ Sources += onestoch.pdf onesto.pdf comp0.pdf comp.pdf onedet.pdf
 
 ## Pictures
 
-Sources += trans.jpg gd.png R.png
+## downcall R.png
+Sources += trans.jpg gd.png R.png R.R
 
 Ignore += thinker.jpg stirrer.large.jpg stirrer.jpg 
 
