@@ -24,10 +24,6 @@ include sub.mk
 
 ##################################################################
 
-## Slides Cleaned out 2018 Dec 18 (Tue)
-
-## git rm lecture.txt beamer.fmt
-
 Archive += $(wildcard archive/*)
 
 ##################################################################
@@ -98,7 +94,12 @@ sirodes.const.tex: sirodes.tex
 diagrams/%: diagrams
 	cd diagrams && $(MAKE) $*
 
-brides.four.pdf:
+## brides.four.pdf: brides.tex
+
+## I've lost the code for the asymp model!!
+Sources += legacy/*.pdf
+%.pdf: legacy/%.pdf
+	$(forcelink)
 
 ##################################################################
 
@@ -116,7 +117,6 @@ Sources += onestoch.pdf onesto.pdf comp0.pdf comp.pdf onedet.pdf
 
 ## Pictures
 
-## downcall R.png
 Sources += trans.jpg gd.png R.png R.R
 
 Ignore += thinker.jpg stirrer.large.jpg stirrer.jpg 
