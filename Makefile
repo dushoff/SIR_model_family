@@ -1,10 +1,13 @@
 # SIR_model_family
-### Hooks for the editor to set the default target
+## This is SIR_model_family, a screens project directory
+## makestuff/project.Makefile
 
-current:target
+current: target
 -include target.mk
 
-##################################################################
+# include makestuff/perl.def
+
+######################################################################
 
 ## To do: 
 
@@ -14,11 +17,8 @@ current:target
 
 # make files
 
-Sources = Makefile .ignore README.md sub.mk LICENSE.md
-
 ## includes
 
-include sub.mk
 -include $(ms)/newtalk.def
 -include $(ms)/perl.def
 
@@ -141,9 +141,27 @@ generationTime.Rout: generationTime.R
 ######################################################################
 
 
--include $(ms)/git.mk
--include $(ms)/visual.mk
+# Content
 
--include $(ms)/wrapR.mk
--include $(ms)/texdeps.mk
--include $(ms)/newtalk.mk
+vim_session:
+	bash -cl "vmt"
+
+######################################################################
+
+### Makestuff
+
+Sources += Makefile
+
+Ignore += makestuff
+msrepo = https://github.com/dushoff
+Makefile: makestuff/Makefile
+makestuff/Makefile:
+	git clone $(msrepo)/makestuff
+	ls $@
+
+-include makestuff/texdeps.mk
+-include makestuff/wrapR.mk
+-include makestuff/os.mk
+-include makestuff/git.mk
+-include makestuff/visual.mk
+-include makestuff/projdir.mk
