@@ -140,7 +140,6 @@ generationTime.Rout: generationTime.R
 
 ######################################################################
 
-
 # Content
 
 vim_session:
