@@ -38,7 +38,6 @@ survival.Rout: survival.R
 ## Phenomenological heterogeneity
 phen.Rout: phen.R
 
-## What to do about svg images in new image world?
 Ignore += network.png network.svg
 network.png: network.svg
 	convert $< $@
