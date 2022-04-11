@@ -51,17 +51,14 @@ simpson.Rout: simpson.R
 
 ##################################################################
 
-### Testing quick diagram
-
-quick.pdf: quick.tex
-
-##################################################################
-
 ## Make pictures with boxes, and associated equations; this was mostly me trying to learn tikz, without much success.
 
 ## Not really ordered 
 Sources += boxes.tex vectors.tex tikzlib.tex sir.tex
 Sources += sirs.tex sirbd.tex msir.tex seir.tex seird.tex three.tex threepage.tex fourpage.tex brides.tex nopoint.pl Makefile sources.mk
+
+## sirs.three.pdf: sirs.tex
+## sirsx.three.pdf: sirsx.tex
 
 ## Equation diagrams
 Sources += sirodes.tex sirbdodes.tex sirbdrates.tex
