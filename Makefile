@@ -65,6 +65,7 @@ Sources += sirs.tex sirbd.tex msir.tex seir.tex seird.tex three.tex threepage.te
 ## Equation diagrams
 Sources += sirodes.tex sirbdodes.tex sirbdrates.tex sirsx.tex
 
+Sources += sirsrates.tex
 ## sirsrates.pdf: sirsrates.tex
 ## sirbdrates.pdf: sirbdrates.tex
 ## sirbdodes.pdf: sirbdodes.tex

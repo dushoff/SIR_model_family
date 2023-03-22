@@ -1,0 +1,20 @@
+\documentclass[12pt]{article}
+
+\usepackage[vcentering]{geometry}
+\geometry{papersize={5in,1.8in}, top=0.25in}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}\begin{tabular}{llll}
+   {\bf Event} & {\bf transition} &{\bf rate} &{\bf Effect $(S,I)$}
+   \\ \hline
+   \\ Infection &$S \to I$  &$\beta SI/N$ & $(-1,1)$
+   \\ Recovery & $I \to R$ & $\gamma I$ & $(0,-1)$
+   \\ Loss of \vspace{-0.8ex} &  $R \to S$ & $\mu (N-S-I)$ & $(1,0)$
+   \\ immunity
+\end{tabular}\end{center}
+
+\end{document}
+
