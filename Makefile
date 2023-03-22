@@ -65,8 +65,10 @@ Sources += sirs.tex sirbd.tex msir.tex seir.tex seird.tex three.tex threepage.te
 ## Equation diagrams
 Sources += sirodes.tex sirbdodes.tex sirbdrates.tex sirsx.tex
 
+## sirsrates.pdf: sirsrates.tex
 ## sirbdrates.pdf: sirbdrates.tex
 ## sirbdodes.pdf: sirbdodes.tex
+## sir.np.three.pdf: 
 
 ## Seems not to chain right with three. (I had to  make an intermediate manually)
 %.np.tex: %.tex
@@ -101,9 +103,7 @@ Sources += legacy/*.pdf
 
 ##################################################################
 
-## Simulations
-
-### Simple
+### Simple curves
 
 Sources += exp.R beta.R
 
