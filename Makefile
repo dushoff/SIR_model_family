@@ -126,6 +126,8 @@ Sources += onestoch.pdf onesto.pdf comp0.pdf comp.pdf onedet.pdf
 
 ## New diagrams in Banff; is this a machine worth using?
 
+Ignore += *.33.pdf
+Sources += statHist.tex draw.tex
 ## statHist.33.pdf: statHist.tex draw.tex
 
 ##################################################################

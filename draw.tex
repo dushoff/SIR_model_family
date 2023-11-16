@@ -1,0 +1,41 @@
+\newcommand{\sirTwo}{
+	\node(S)[bigcompartment]{S};
+	\node(trans1)[right=of S]{};
+	\node(I1)[bigcompartment, right=of trans1]{I$_1$};
+	\node(rec1)[right=of I1]{};
+	\node(R1)[bigcompartment, right=of rec1]{R$_1$};
+
+	\node(trans2)[below=of S]{};
+	\node(I2)[bigcompartment, below=of trans2]{I$_2$};
+	\node(rec2)[below=of I2]{};
+	\node(R2)[bigcompartment, below=of rec2]{R$_2$};
+
+	\node(jtrans1)[right=of R2]{};
+	\node(J1)[bigcompartment, right=of jtrans1]{J$_1$};
+	\node(rec1)[right=of J1]{};
+	\node(R)[bigcompartment, right=of rec1]{R};
+
+	\node(jtrans2)[below=of R1]{};
+	\node(J2)[bigcompartment, below=of jtrans2]{J$_2$};
+	\node(rec2)[below=of J2]{};
+}
+
+\newcommand{\sirTwoV}{
+	\draw[->, very thick] (S) to (I1); 
+	\draw[->, very thick] (I1) to (R1); 
+
+	\draw[->, very thick] (S) to (I2); 
+	\draw[->, very thick] (I2) to (R2); 
+
+	\draw[->, very thick] (R2) to (J1); 
+	\draw[->, very thick] (J1) to (R); 
+
+	\draw[->, very thick] (R1) to (J2); 
+	\draw[->, very thick] (J2) to (R); 
+}
+
+\newcommand{\sirTwoBoost}{
+	\draw[->, very thick] (R1) 
+		to [bend left=45] (R); 
+}
+
