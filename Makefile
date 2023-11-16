@@ -9,6 +9,13 @@ current: target
 
 ######################################################################
 
+# Content
+
+vim_session:
+	bash -cl "vmt"
+
+######################################################################
+
 ## To do: 
 
 #### Clean out the talk stuff from this directory and make it a place for SIR modeling resources
@@ -79,6 +86,9 @@ Ignore += *.three.*
 %.three.tex: three.tex %.tex
 	perl -npe 's/figtmp/$*/' $< > $@
 
+%.33.tex: 33.tex %.tex page.tex draw.tex
+	perl -npe 's/figtmp/$*/' $< > $@
+
 Ignore += *.four.*
 %.four.tex: four.tex %.tex
 	perl -npe 's/figtmp/$*/' $< > $@
@@ -114,6 +124,12 @@ Sources += onestoch.pdf onesto.pdf comp0.pdf comp.pdf onedet.pdf
 
 ##################################################################
 
+## New diagrams in Banff; is this a machine worth using?
+
+## statHist.33.pdf: statHist.tex draw.tex
+
+##################################################################
+
 ## Pictures
 
 Sources += trans.jpg gd.png R.png R.R
@@ -136,13 +152,6 @@ stirrer.jpg: stirrer.large.jpg
 steps.Rout: steps.R
 
 generationTime.Rout: generationTime.R
-
-######################################################################
-
-# Content
-
-vim_session:
-	bash -cl "vmt"
 
 ######################################################################
 
