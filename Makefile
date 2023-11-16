@@ -86,9 +86,6 @@ Ignore += *.three.*
 %.three.tex: three.tex %.tex
 	perl -npe 's/figtmp/$*/' $< > $@
 
-%.33.tex: 33.tex %.tex page.tex draw.tex
-	perl -npe 's/figtmp/$*/' $< > $@
-
 Ignore += *.four.*
 %.four.tex: four.tex %.tex
 	perl -npe 's/figtmp/$*/' $< > $@
@@ -96,6 +93,14 @@ Ignore += *.four.*
 Ignore += four.tex
 four.tex: three.tex 
 	perl -npe 's/threepage/fourpage/' $< > $@
+
+Ignore += *.33.pdf
+Sources += statHist.tex draw.tex 33.tex page.tex
+
+%.33.tex: 33.tex %.tex page.tex draw.tex
+	perl -npe 's/figtmp/$*/' $< > $@
+
+######################################################################
 
 # Remove (N) from β for less intimidation
 Ignore += *.const.tex
@@ -126,8 +131,6 @@ Sources += onestoch.pdf onesto.pdf comp0.pdf comp.pdf onedet.pdf
 
 ## New diagrams in Banff; is this a machine worth using?
 
-Ignore += *.33.pdf
-Sources += statHist.tex draw.tex
 ## statHist.33.pdf: statHist.tex draw.tex
 
 ##################################################################
