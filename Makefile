@@ -1,6 +1,4 @@
 # SIR_model_family; diagrams relating to disease sims, but no sims
-## This is SIR_model_family, a screens project directory
-## makestuff/project.Makefile
 
 current: target
 -include target.mk
