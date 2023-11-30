@@ -21,24 +21,26 @@
 }
 
 \newcommand{\sirTwoV}{
-	\draw[->, very thick] (S) to (I1); 
+	\draw[->, very thick] (S) edge node {$\lambda_1$} (I1); 
 	\draw[->, very thick] (I1) to (R1); 
 
-	\draw[->, very thick] (S) to (I2); 
+	\draw[->, very thick] (S) edge node {$\lambda_2$} (I2); 
 	\draw[->, very thick] (I2) to (R2); 
 
-	\draw[->, very thick] (R2) to (J1); 
+	\draw[->, very thick] (R2) edge node {$\varepsilon\lambda_1$} (J1); 
 	\draw[->, very thick] (J1) to (R); 
 
-	\draw[->, very thick] (R1) to (J2); 
+	\draw[->, very thick] (R1) edge node {$\varepsilon\lambda_2$} (J2); 
 	\draw[->, very thick] (J2) to (R); 
 }
 
 \newcommand{\sirTwoBoost}{
 	\draw[->, very thick] (R1) 
-		to [bend left=45] (R)
+		edge [bend left=45]
+		node {$q$\ldots}
+		(R)
 	; 
 	\draw[->, very thick] (R2) 
-		to [bend right=45] (R); 
+		to [bend right=45] node {$q(1-\varepsilon)\lambda_2$} (R); 
 }
 
