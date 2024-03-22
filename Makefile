@@ -95,6 +95,7 @@ four.tex: three.tex
 Ignore += *.33.pdf
 Sources += statHist.tex hist.tex draw.tex 33.tex page.tex boost.tex
 
+Ignore += $(wildcard *.33.tex)
 ## boost.33.pdf: 33.tex boost.tex
 %.33.tex: 33.tex %.tex page.tex draw.tex
 	perl -npe 's/figtmp/$*/' $< > $@
