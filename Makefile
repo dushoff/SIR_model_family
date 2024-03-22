@@ -1,5 +1,7 @@
 # SIR_model_family; diagrams relating to disease sims, but no sims
 
+## https://dushoff.github.io/SIR_model_family/boost.33.pdf
+
 current: target
 -include target.mk
 
