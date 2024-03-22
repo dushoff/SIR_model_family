@@ -93,8 +93,9 @@ four.tex: three.tex
 	perl -npe 's/threepage/fourpage/' $< > $@
 
 Ignore += *.33.pdf
-Sources += statHist.tex hist.tex draw.tex 33.tex page.tex
+Sources += statHist.tex hist.tex draw.tex 33.tex page.tex boost.tex
 
+## boost.33.pdf: 33.tex boost.tex
 %.33.tex: 33.tex %.tex page.tex draw.tex
 	perl -npe 's/figtmp/$*/' $< > $@
 
