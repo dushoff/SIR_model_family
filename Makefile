@@ -58,11 +58,14 @@ simpson.Rout: simpson.R
 
 ## Make pictures with boxes, and associated equations; this was mostly me trying to learn tikz, without much success.
 
-## Not really ordered 
+## Not really ordered | also, wtf 2024 Jun 16 (Sun)
 Sources += boxes.tex vectors.tex tikzlib.tex sir.tex
 Sources += sirs.tex sirbd.tex msir.tex seir.tex seird.tex three.tex threepage.tex fourpage.tex brides.tex nopoint.pl Makefile sources.mk
 
-## sirs.three.pdf: sirs.tex
+## sir.three.pdf: sir.tex ## Standard thinker diagram
+## sirlin.three.pdf: sirlin.tex ## 
+
+## sirs.three.pdf: sirs.tex ## Standard thinker diagram
 ## sirsx.three.pdf: sirsx.tex
 
 ## seird.four.pdf: seird.tex
