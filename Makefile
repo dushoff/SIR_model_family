@@ -75,13 +75,15 @@ Sources += sirbd.tex msir.tex seir.tex seird.tex three.tex threepage.tex fourpag
 ## seird.four.pdf: seird.tex
 
 ## Equation diagrams
-Sources += sirodes.tex sirbdodes.tex sirbdrates.tex sirsx.tex
+Sources += sirodes.tex sirbdodes.tex sirbdrates.tex sirsx.tex sirrates_scaled.tex
 
 Sources += sirsrates.tex
 ## sirsrates.pdf: sirsrates.tex
 ## sirbdrates.pdf: sirbdrates.tex
 ## sirbdodes.pdf: sirbdodes.tex
 ## sir.np.three.pdf: 
+
+## sirrates_scaled.pdf: sirrates_scaled.tex
 
 ## Seems not to chain right with three. (I had to  make an intermediate manually)
 %.np.tex: %.tex
