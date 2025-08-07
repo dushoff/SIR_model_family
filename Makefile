@@ -183,6 +183,7 @@ makestuff/Makefile:
 
 -include makestuff/texdeps.mk
 -include makestuff/wrapR.mk
+-include makestuff/pdfpages.mk
 -include makestuff/os.mk
 -include makestuff/git.mk
 -include makestuff/visual.mk
