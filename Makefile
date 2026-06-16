@@ -69,7 +69,7 @@ Sources += sirbd.tex msir.tex seir.tex seird.tex three.tex threepage.tex fourpag
 ## sir.three.pdf: sir.tex boxes.tex ## Standard thinker diagram
 ## sirlin.three.pdf: sirlin.tex ## 
 
-## sirs.three.pdf: sirs.tex ## Standard thinker diagram
+## sirs.three.pdf: sirs.tex
 ## sirsx.three.pdf: sirsx.tex
 
 ## seird.four.pdf: seird.tex
